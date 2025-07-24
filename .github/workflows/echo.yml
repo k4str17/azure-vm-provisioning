@@ -11,3 +11,11 @@ jobs:
     steps:
       - name: Print message
         run: echo "Hello from GitHub Actions!"
+
+      - name: Show repository variables
+        run: |
+          echo "REPO_VAR: ${{ vars.TEST_VAR }}"
+
+      - name: Show repository secrets
+        run: |
+          echo "REPO_SECRET: ${{ secrets.TEST_SECRET }}"
